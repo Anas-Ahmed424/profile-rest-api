@@ -21,6 +21,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
         }
 
     def create(self, validated_data):
+        print("------> INSIDE Serilizer Class Create Function")
         """Create and return a new user"""
         user = models.UserProfile.objects.create_user(
             email=validated_data['email'],
